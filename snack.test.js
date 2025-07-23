@@ -30,3 +30,13 @@ test("La funzione isPalindrome verifica se una stringa è un palindromo", () => 
   expect(isPalindrome("radar")).toBe(true);
   expect(isPalindrome("hello")).toBe(false);
 });
+
+// Snack 6
+test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido", () => {
+  expect(() => {
+    createSlug("");
+  }).toThrow("Il titolo non può essere vuoto");
+  expect(() => {
+    createSlug(null);
+  }).toThrow("Il titolo non può essere vuoto");
+});
