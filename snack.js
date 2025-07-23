@@ -27,9 +27,15 @@ function isPalindrome(parola) {
   return parola === parolaInversa;
 }
 
+// Snack 7
+function findPostById(posts, id) {
+  return posts.find((post) => post.id === id);
+}
+
 module.exports = {
   getInitials,
   createSlug,
   average,
+  findPostById,
   isPalindrome,
 };

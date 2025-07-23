@@ -3,6 +3,7 @@ const {
   createSlug,
   average,
   isPalindrome,
+  findPostById,
 } = require("./snack.js");
 
 // Snack 1
@@ -39,4 +40,13 @@ test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido
   expect(() => {
     createSlug(null);
   }).toThrow("Il titolo non può essere vuoto");
+});
+
+// Snack 7
+test(`La funzione findPostById restituisce il post corretto dato l'array di post e l'id`, () => {
+  const posts = [
+    { id: 1, title: "Post 1" },
+    { id: 2, title: "Post 2" },
+  ];
+  expect(findPostById(posts, 1)).toEqual({ id: 1, title: "Post 1" });
 });
