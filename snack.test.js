@@ -7,10 +7,16 @@ test("La funzione getInitials restituisce le iniiziali di un nome completo", () 
 
 // Snack 2
 test("La funzione createSlug restituisce una stringa in lowercase,", () => {
-  expect(createSlug("Hello World")).toBe("hello world");
+  expect(createSlug("Hello World")).toBe("hello-world");
 });
 
 // Snack 3
 test('La funzione "average" calcola la media aritmetica di un array di numeri', () => {
   expect(average([10, 20])).toBe(15);
 });
+
+// Snack 4
+test("La funzione createSlug sostituisce gli spazi con -.", () => {
+  expect(createSlug("Hello World")).toBe("hello-world");
+});
+// Snack 5
