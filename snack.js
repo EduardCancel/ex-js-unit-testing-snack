@@ -6,6 +6,9 @@ function getInitials(name) {
 
 // Snack 2 - 4
 function createSlug(title) {
+  if (!title) {
+    throw new Error("Il titolo non può essere vuoto");
+  }
   return title.toLowerCase().replace(" ", "-");
 }
 
